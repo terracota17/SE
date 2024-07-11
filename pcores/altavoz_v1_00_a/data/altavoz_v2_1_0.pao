@@ -1,0 +1,10 @@
+##############################################################################
+## Filename:          C:/Users/CJRipa/Videos/Proyecto/PracticasSE/pcores/altavoz_v1_00_a/data/altavoz_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Tue Jan 31 21:14:15 2023 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a  all 
+lib plbv46_slave_single_v1_01_a  all 
+lib altavoz_v1_00_a user_logic vhdl
+lib altavoz_v1_00_a altavoz vhdl

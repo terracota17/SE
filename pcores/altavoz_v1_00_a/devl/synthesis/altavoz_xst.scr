@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "C:\Users\CJRipa\Videos\Proyecto\PracticasSE\pcores\altavoz_v1_00_a\devl\synthesis\altavoz_xst.prj"
+-top altavoz
+-p virtex6
+-ofn "C:\Users\CJRipa\Videos\Proyecto\PracticasSE\pcores\altavoz_v1_00_a\devl\synthesis\altavoz_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib altavoz_v1_00_a
