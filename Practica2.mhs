@@ -1,0 +1,131 @@
+
+ PARAMETER VERSION = 2.1.0
+
+
+ PORT leds = xps_gpio_0_GPIO_IO, DIR = IO, VEC = [0:7]
+ PORT RX_pin = xps_uartlite_0_RX, DIR = I
+ PORT TX_pin = xps_uartlite_0_TX, DIR = O
+ PORT Rst_pin = net_Rst_pin, DIR = I, SIGIS = RST
+ PORT Clk_pin = plb_v46_0_PLB_Clk, DIR = I, SIGIS = CLK
+ PORT switch = xps_gpio_1_GPIO_IO, DIR = IO, VEC = [0:7]
+ PORT banner_0_col_serial_out_pin = banner_0_col_serial_out, DIR = O
+ PORT banner_0_col_clk_pin = banner_0_col_clk, DIR = O
+ PORT banner_0_row_serial_out_pin = banner_0_row_serial_out, DIR = O
+ PORT banner_0_row_clk_pin = banner_0_row_clk, DIR = O
+ PORT banner_0_reset_out_pin = banner_0_reset_out, DIR = O
+ PORT banner_0_reset2_out_pin = banner_0_reset2_out, DIR = O
+ PORT keypad_0_S_pin = keypad_0_S, DIR = O, VEC = [3:0]
+ PORT keypad_0_R_pin = keypad_0_R, DIR = I, VEC = [3:0]
+ PORT leds_rgb_0_red_pin = leds_rgb_0_red, DIR = O
+ PORT leds_rgb_0_green_pin = leds_rgb_0_green, DIR = O
+ PORT leds_rgb_0_blue_pin = leds_rgb_0_blue, DIR = O
+ PORT altavoz_0_sonido_pin = altavoz_0_sonido, DIR = O
+
+
+BEGIN microblaze
+ PARAMETER INSTANCE = microblaze_0
+ PARAMETER HW_VER = 8.30.a
+ BUS_INTERFACE DPLB = plb_v46_0
+ BUS_INTERFACE IPLB = plb_v46_0
+ PORT MB_RESET = net_Rst_pin
+END
+
+BEGIN plb_v46
+ PARAMETER INSTANCE = plb_v46_0
+ PARAMETER HW_VER = 1.05.a
+ PORT PLB_Clk = plb_v46_0_PLB_Clk
+ PORT SYS_Rst = net_Rst_pin
+END
+
+BEGIN xps_bram_if_cntlr
+ PARAMETER INSTANCE = xps_bram_if_cntlr_0
+ PARAMETER HW_VER = 1.00.b
+ PARAMETER C_SPLB_NATIVE_DWIDTH = 32
+ PARAMETER C_BASEADDR = 0x00000000
+ PARAMETER C_HIGHADDR = 0x00007fff
+ BUS_INTERFACE SPLB = plb_v46_0
+ BUS_INTERFACE PORTA = xps_bram_if_cntlr_0_PORTA
+END
+
+BEGIN bram_block
+ PARAMETER INSTANCE = bram_block_0
+ PARAMETER HW_VER = 1.00.a
+ BUS_INTERFACE PORTA = xps_bram_if_cntlr_0_PORTA
+END
+
+BEGIN xps_gpio
+ PARAMETER INSTANCE = xps_gpio_0
+ PARAMETER HW_VER = 2.00.a
+ PARAMETER C_GPIO_WIDTH = 8
+ PARAMETER C_BASEADDR = 0x81420000
+ PARAMETER C_HIGHADDR = 0x8142ffff
+ BUS_INTERFACE SPLB = plb_v46_0
+ PORT GPIO_IO = xps_gpio_0_GPIO_IO
+END
+
+BEGIN xps_uartlite
+ PARAMETER INSTANCE = xps_uartlite_0
+ PARAMETER HW_VER = 1.02.a
+ PARAMETER C_USE_PARITY = 0
+ PARAMETER C_SPLB_CLK_FREQ_HZ = 50000000
+ PARAMETER C_BASEADDR = 0x84000000
+ PARAMETER C_HIGHADDR = 0x8400ffff
+ BUS_INTERFACE SPLB = plb_v46_0
+ PORT RX = xps_uartlite_0_RX
+ PORT TX = xps_uartlite_0_TX
+END
+
+BEGIN xps_gpio
+ PARAMETER INSTANCE = xps_gpio_1
+ PARAMETER HW_VER = 2.00.a
+ PARAMETER C_GPIO_WIDTH = 8
+ PARAMETER C_BASEADDR = 0x81400000
+ PARAMETER C_HIGHADDR = 0x8140ffff
+ BUS_INTERFACE SPLB = plb_v46_0
+ PORT GPIO_IO = xps_gpio_1_GPIO_IO
+END
+
+BEGIN banner
+ PARAMETER INSTANCE = banner_0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0xc5800000
+ PARAMETER C_HIGHADDR = 0xc580ffff
+ BUS_INTERFACE SPLB = plb_v46_0
+ PORT col_serial_out = banner_0_col_serial_out
+ PORT col_clk = banner_0_col_clk
+ PORT row_serial_out = banner_0_row_serial_out
+ PORT row_clk = banner_0_row_clk
+ PORT reset_out = banner_0_reset_out
+ PORT reset2_out = banner_0_reset2_out
+END
+
+BEGIN keypad
+ PARAMETER INSTANCE = keypad_0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0xc9600000
+ PARAMETER C_HIGHADDR = 0xc960ffff
+ BUS_INTERFACE SPLB = plb_v46_0
+ PORT S = keypad_0_S
+ PORT R = keypad_0_R
+END
+
+BEGIN leds_rgb
+ PARAMETER INSTANCE = leds_rgb_0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0xc7200000
+ PARAMETER C_HIGHADDR = 0xc720ffff
+ BUS_INTERFACE SPLB = plb_v46_0
+ PORT red = leds_rgb_0_red
+ PORT green = leds_rgb_0_green
+ PORT blue = leds_rgb_0_blue
+END
+
+BEGIN altavoz
+ PARAMETER INSTANCE = altavoz_0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0xcee00000
+ PARAMETER C_HIGHADDR = 0xcee0ffff
+ BUS_INTERFACE SPLB = plb_v46_0
+ PORT sonido = altavoz_0_sonido
+END
+

@@ -1,0 +1,64 @@
+
+bitinit version Xilinx EDK 14.1 Build EDK_P.15xf
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File Practica2.mhs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+INFO:EDK:1432 - Frequency for Top-Level Input Clock 'Clk_pin' is not specified.
+   Clock DRCs will not be performed for IPs connected to that clock port, unless
+   they are connected through the clock generator IP. 
+
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00007fff) xps_bram_if_cntlr_0	plb_v46_0
+  (0x81400000-0x8140ffff) xps_gpio_1	plb_v46_0
+  (0x81420000-0x8142ffff) xps_gpio_0	plb_v46_0
+  (0x84000000-0x8400ffff) xps_uartlite_0	plb_v46_0
+INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:plb_v46_0 - tool is overriding
+   PARAMETER C_PLBV46_NUM_MASTERS value to 2 -
+   E:\Xilinx\14.1\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 78 
+INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:plb_v46_0 - tool is overriding
+   PARAMETER C_PLBV46_NUM_SLAVES value to 4 -
+   E:\Xilinx\14.1\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 79 
+INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:plb_v46_0 - tool is overriding
+   PARAMETER C_PLBV46_MID_WIDTH value to 1 -
+   E:\Xilinx\14.1\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 80 
+INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:plb_v46_0 - tool is overriding
+   PARAMETER C_PLBV46_DWIDTH value to 32 -
+   E:\Xilinx\14.1\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: bram_block, INSTANCE:bram_block_0 - tool is overriding
+   PARAMETER C_MEMSIZE value to 0x8000 -
+   E:\Xilinx\14.1\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 76 
+INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:xps_gpio_0 - tool is overriding
+   PARAMETER C_SPLB_NUM_MASTERS value to 2 -
+   E:\Xilinx\14.1\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: xps_uartlite, INSTANCE:xps_uartlite_0 - tool is
+   overriding PARAMETER C_SPLB_NUM_MASTERS value to 2 -
+   E:\Xilinx\14.1\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_uartlite_v1_02_a
+   \data\xps_uartlite_v2_1_0.mpd line 83 
+INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:xps_gpio_1 - tool is overriding
+   PARAMETER C_SPLB_NUM_MASTERS value to 2 -
+   E:\Xilinx\14.1\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 81 
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/Practica2_bd" -p xc3s1000ft256-5 -bt
+"implementation/Practica2.bit"  -bd "bootloops/microblaze_0.elf" tag
+microblaze_0  -o b implementation/download.bit 
+Memory Initialization completed successfully.
+
