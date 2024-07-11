@@ -1,0 +1,274 @@
+#ucf para la Spartan 3S100 con los puntos de los displays 7-seg
+#salida del oscilador a 100MHz
+#
+#NET clk_in LOC=T9;
+#
+#salida del oscilador a 50MHz
+ NET clk_pin LOC=P8;
+ NET "clk_pin" FLOAT;
+
+# entradas /salidas puerto serie
+NET rx_pin LOC=G5;
+NET "rx_pin" FLOAT;
+NET tx_pin LOC=J2;
+NET "tx_pin" FLOAT;
+
+###Zumbador
+#NET zumbador_GPIO_IO_O_pin<0> LOC=N15;
+#NET "zumbador_GPIO_IO_O_pin<0>" FLOAT;
+	#switches placa superior
+
+NET rst_pin LOC=K4;
+NET "rst_pin" FLOAT;
+#NET SW<2> LOC=K3;
+#NET SW<3> LOC=K2;
+#NET SW<4> LOC=J4;
+
+	#switches placa extendida
+
+#NET switch<0> LOC=P12;
+#NET switch<1> LOC=J1;
+#NET switch<2> LOC=H1;
+#NET switch<3> LOC=H3;
+#NET switch<4> LOC=G2;
+#NET switch<5> LOC=K15;
+#NET switch<6> LOC=K16;
+#NET switch<7> LOC=F15;
+#NET "switch<0>" FLOAT;
+#NET "switch<1>" FLOAT;
+#NET "switch<2>" FLOAT;
+#NET "switch<3>" FLOAT;
+#NET "switch<4>" FLOAT;
+#NET "switch<5>" FLOAT;
+#NET "switch<6>" FLOAT;
+#NET "switch<7>" FLOAT;
+
+#
+	#push buttons placa superior
+#NET SW2 LOC=E11; 
+#NET SW3 LOC=A13; 
+
+	# Push button placa extendida
+#NET pushb1 LOC=H4;
+#NET pushb2 LOC=L5;
+#NET pushb3 LOC=N2;
+#NET pushb4 LOC=M3;
+
+
+##Altavoz
+
+NET altavoz_0_sonido_pin LOC=M15;
+
+###KEYPAD MATRICIAL
+net keypad_0_S_pin<3> loc=F2;
+net keypad_0_S_pin<3> iostandard=LVCMOS25;
+net keypad_0_S_pin<2> loc=G4;
+net keypad_0_S_pin<2> iostandard=LVCMOS25;
+net keypad_0_S_pin<1> loc=G3;
+net keypad_0_S_pin<1> iostandard=LVCMOS25;
+net keypad_0_S_pin<0> loc=G1;
+net keypad_0_S_pin<0> iostandard=LVCMOS25;
+
+
+net keypad_0_R_pin<3> loc=J14;
+net keypad_0_R_pin<3> iostandard=LVCMOS25;
+net keypad_0_R_pin<2> loc=H14;
+net keypad_0_R_pin<2> iostandard=LVCMOS25;
+net keypad_0_R_pin<1> loc=M4;
+net keypad_0_R_pin<1> iostandard=LVCMOS25;
+net keypad_0_R_pin<0> loc=P1;
+net keypad_0_R_pin<0> iostandard=LVCMOS25;
+
+#barra de leds placa extendida
+
+#NET leds<0> LOC=L5;
+#NET leds<1> LOC=N2;
+#NET leds<2> LOC=M3;
+#NET leds<3> LOC=N1;
+#NET leds<4> LOC=T13;
+#NET leds<5> LOC=L15;
+#NET leds<6> LOC=J13;
+#NET leds<7> LOC=H15;
+#NET "leds<0>" FLOAT;
+#NET "leds<1>" FLOAT;
+#NET "leds<2>" FLOAT;
+#NET "leds<3>" FLOAT;
+#NET "leds<4>" FLOAT;
+#NET "leds<5>" FLOAT;
+#NET "leds<6>" FLOAT;
+#NET "leds<7>" FLOAT;
+#NET leds_pin<8> LOC=J16;
+#NET leds_pin<9> LOC=J14;
+
+ 
+
+#Display 7-segmentos 
+#
+#		   S0
+#		   ---
+#	    S5	|	|s1
+#		    S6
+#		   ---
+#	    S4	|	|S2
+#
+#		   ---
+#		   S3				punto
+
+
+#Display 7-segmentos de la placa superior
+
+#net display<0> loc=R10;
+#net display<1> loc=P10;
+#net display<2> loc=M11;
+#NET display<3> loc=M6;
+#NET display<4> loc=N6;
+#NET display<5> loc=T7;
+#NET display<6> loc=R7;
+#NET display<7> loc=N11;  # punto
+
+
+
+#Display 7-segmentos de la parte izquierda de la placa extendida:
+
+#NET displayi<0> LOC=H14;
+#NET displayi<1> LOC=M4;
+#NET displayi<2> LOC=P1;
+#NET displayi<3> LOC=N3;
+#NET displayi<4> LOC=M15;
+#NET displayi<5> LOC=H13;
+#NET displayi<6> LOC=G16;
+#NET displayi<7> LOC=N15;  # punto
+
+
+
+
+#Display 7-segmentos de la parte derecha de la placa extendida
+
+#NET displayd<0> loc=E2;
+#NET displayd<1> loc=E1;
+#NET displayd<2> loc=F3;
+#NET displayd<3> loc=F2;
+#NET displayd<4> loc=G4;
+#NET displayd<5> loc=G3;
+#NET displayd<6> loc=G1;
+#NET displayd<7> loc=H4; # punto
+
+
+####INFRARROJOS
+#NET code_infrared_pin LOC=D16;
+#NET in_infrared_pin LOC=J14;
+
+####LEDS COLORES
+
+#NET leds_rgb_0_red_pin LOC=P12;
+#NET leds_rgb_0_green_pin LOC=H1;
+#NET leds_rgb_0_blue_pin LOC=J1;
+
+NET leds_rgb_0_red_pin LOC=E15;
+NET leds_rgb_0_green_pin LOC=D16;
+NET leds_rgb_0_blue_pin LOC=J16;
+
+#NET USER2_RED_pin LOC=J14;
+#NET USER2_GREEN_pin LOC=N15;
+#NET USER2_BLUE_pin LOC=G16;
+
+
+
+
+#### LCD
+
+#NET lcd_rs LOC=P12;
+#Este no se usa en la placa nueva. Sólo se escribe en el lcd.
+#NET lcd_rw LOC=J1; 
+#NET lcd_e LOC=H1;
+#NET lcd_data<0> LOC=H3;
+#NET lcd_data<1> LOC=G2;
+#NET lcd_data<2> LOC=K15;
+#NET lcd_data<3> LOC=K16;
+#NET lcd_data<4> LOC=F15;
+#NET lcd_data<5> LOC=E2;
+#NET lcd_data<6> LOC=E1;
+#NET lcd_data<7> LOC=F3;
+
+
+#### BANNER
+
+NET banner_0_row_serial_out_pin loc=H3;	
+NET banner_0_row_serial_out_pin iostandard=LVCMOS25;
+
+NET banner_0_row_clk_pin loc=G2;
+NET banner_0_row_clk_pin iostandard=LVCMOS25;
+
+NET banner_0_col_serial_out_pin loc=P12;
+NET banner_0_col_serial_out_pin   iostandard=LVCMOS25;
+
+NET banner_0_col_clk_pin loc=J1;
+NET banner_0_col_clk_pin    iostandard=LVCMOS25;
+
+NET banner_0_reset_out_pin loc=H1;
+NET banner_0_reset_out_pin 	 iostandard=LVCMOS25;
+
+NET banner_0_reset2_out_pin loc=K15;
+NET banner_0_reset2_out_pin 	 iostandard=LVCMOS25;
+
+
+
+###KEYPAD
+
+#NET keypad_0_S_pin<3> loc=F2;
+#NET keypad_0_S_pin<3> iostandard=LVCMOS25;
+#NET keypad_0_S_pin<2> loc=G4;
+#NET keypad_0_S_pin<2> iostandard=LVCMOS25;
+#NET keypad_0_S_pin<1> loc=G3;
+#NET keypad_0_S_pin<1> iostandard=LVCMOS25;
+#NET keypad_0_S_pin<0> loc=G1;
+#NET keypad_0_S_pin<0> iostandard=LVCMOS25;
+
+#NET keypad_0_R_pin<3> loc=J14;
+#NET keypad_0_R_pin<3> iostandard=LVCMOS25;
+#NET keypad_0_R_pin<2> loc=H14;
+#NET keypad_0_R_pin<2> iostandard=LVCMOS25;
+#NET keypad_0_R_pin<1> loc=M4;
+#NET keypad_0_R_pin<1> iostandard=LVCMOS25;
+#NET keypad_0_R_pin<0> loc=P1;
+#NET keypad_0_R_pin<0> iostandard=LVCMOS25;
+
+###### Motor
+#
+#NET control_motor<0> LOC=L15;
+#NET control_motor<1> LOC=L5;
+#NET control_motor<2> LOC=N2;
+#NET control_motor<3> LOC=M3;
+
+###CONVERSOR
+
+#NET conv_addr_pin<0> LOC= G1;
+#NET conv_addr_pin<1> LOC= H4;
+#NET conv_addr_pin<2> LOC= P2;
+#NET conv_ale_pin LOC= R1;
+#NET conv_clk_pin LOC = F2;
+#NET conv_data_pin<7>  LOC = J14;
+#NET conv_data_pin<6>  LOC = H14 ;
+#NET conv_data_pin<5>  LOC = M4;
+#NET conv_data_pin<4>  LOC = P1;
+#NET conv_data_pin<3>  LOC = N3;
+#NET conv_data_pin<2>  LOC = M15;
+#NET conv_data_pin<1>  LOC = H13;
+#NET conv_data_pin<0> LOC=G16;
+#NET conv_eoc_pin LOC=N15;
+#NET conv_oe_pin LOC=G3;
+#NET conv_start_pin LOC = G4;
+
+
+
+### I2C 
+#NET SCL LOC= F5;
+#NET SDA LOC= D2;
+
+
+
+
+
+
+
+
