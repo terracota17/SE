@@ -1,0 +1,118 @@
+--------------------------------------------------------------------------------
+Release 14.1 Trace  (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.1\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -e 3 -xml Practica2.twx
+Practica2.ncd Practica2.pcf
+
+Design file:              Practica2.ncd
+Physical constraint file: Practica2.pcf
+Device,package,speed:     xc3s1000,ft256,-5 (PRODUCTION 1.39 2012-04-23)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock Clk_pin
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+RX_pin      |    3.342(R)|   -1.221(R)|Clk_pin_BUFGP     |   0.000|
+Rst_pin     |    4.839(R)|   -0.270(R)|Clk_pin_BUFGP     |   0.000|
+leds<0>     |    0.778(R)|    0.126(R)|Clk_pin_BUFGP     |   0.000|
+leds<1>     |    0.816(R)|    0.075(R)|Clk_pin_BUFGP     |   0.000|
+leds<2>     |    0.567(R)|    0.283(R)|Clk_pin_BUFGP     |   0.000|
+leds<3>     |    0.928(R)|   -0.050(R)|Clk_pin_BUFGP     |   0.000|
+leds<4>     |    0.835(R)|    0.015(R)|Clk_pin_BUFGP     |   0.000|
+leds<5>     |    1.268(R)|   -0.333(R)|Clk_pin_BUFGP     |   0.000|
+leds<6>     |    0.979(R)|   -0.072(R)|Clk_pin_BUFGP     |   0.000|
+leds<7>     |    1.001(R)|   -0.090(R)|Clk_pin_BUFGP     |   0.000|
+switch<0>   |    0.810(R)|    0.091(R)|Clk_pin_BUFGP     |   0.000|
+switch<1>   |    0.889(R)|   -0.003(R)|Clk_pin_BUFGP     |   0.000|
+switch<2>   |    1.255(R)|   -0.280(R)|Clk_pin_BUFGP     |   0.000|
+switch<3>   |    0.776(R)|    0.129(R)|Clk_pin_BUFGP     |   0.000|
+switch<4>   |    1.229(R)|   -0.250(R)|Clk_pin_BUFGP     |   0.000|
+switch<5>   |    1.608(R)|   -0.579(R)|Clk_pin_BUFGP     |   0.000|
+switch<6>   |    0.913(R)|    0.013(R)|Clk_pin_BUFGP     |   0.000|
+switch<7>   |    1.229(R)|   -0.240(R)|Clk_pin_BUFGP     |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock Clk_pin to Pad
+---------------------------+------------+------------------+--------+
+                           | clk (edge) |                  | Clock  |
+Destination                |   to PAD   |Internal Clock(s) | Phase  |
+---------------------------+------------+------------------+--------+
+TX_pin                     |    6.896(R)|Clk_pin_BUFGP     |   0.000|
+altavoz_0_sonido_pin       |   10.026(R)|Clk_pin_BUFGP     |   0.000|
+banner_0_reset2_out_pin    |    9.661(R)|Clk_pin_BUFGP     |   0.000|
+banner_0_reset_out_pin     |    9.844(R)|Clk_pin_BUFGP     |   0.000|
+banner_0_row_clk_pin       |    6.494(R)|Clk_pin_BUFGP     |   0.000|
+banner_0_row_serial_out_pin|   15.155(R)|Clk_pin_BUFGP     |   0.000|
+leds<0>                    |    8.720(R)|Clk_pin_BUFGP     |   0.000|
+leds<1>                    |    8.543(R)|Clk_pin_BUFGP     |   0.000|
+leds<2>                    |    8.723(R)|Clk_pin_BUFGP     |   0.000|
+leds<3>                    |    9.151(R)|Clk_pin_BUFGP     |   0.000|
+leds<4>                    |    9.040(R)|Clk_pin_BUFGP     |   0.000|
+leds<5>                    |    8.950(R)|Clk_pin_BUFGP     |   0.000|
+leds<6>                    |    9.662(R)|Clk_pin_BUFGP     |   0.000|
+leds<7>                    |    9.226(R)|Clk_pin_BUFGP     |   0.000|
+leds_rgb_0_blue_pin        |   11.771(R)|Clk_pin_BUFGP     |   0.000|
+leds_rgb_0_green_pin       |   12.603(R)|Clk_pin_BUFGP     |   0.000|
+leds_rgb_0_red_pin         |   11.874(R)|Clk_pin_BUFGP     |   0.000|
+switch<0>                  |    8.985(R)|Clk_pin_BUFGP     |   0.000|
+switch<1>                  |    9.279(R)|Clk_pin_BUFGP     |   0.000|
+switch<2>                  |    8.950(R)|Clk_pin_BUFGP     |   0.000|
+switch<3>                  |    8.920(R)|Clk_pin_BUFGP     |   0.000|
+switch<4>                  |    9.286(R)|Clk_pin_BUFGP     |   0.000|
+switch<5>                  |    9.241(R)|Clk_pin_BUFGP     |   0.000|
+switch<6>                  |    8.955(R)|Clk_pin_BUFGP     |   0.000|
+switch<7>                  |    9.056(R)|Clk_pin_BUFGP     |   0.000|
+---------------------------+------------+------------------+--------+
+
+Clock to Setup on destination clock Clk_pin
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk_pin        |   10.404|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Tue Jan 31 21:29:10 2023 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 167 MB
+
+
+

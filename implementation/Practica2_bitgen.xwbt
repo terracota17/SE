@@ -1,0 +1,7 @@
+INFILE=C:\Users\CJRipa\Videos\Proyecto\PracticasSE\implementation\Practica2.ncd
+OUTFILE=C:\Users\CJRipa\Videos\Proyecto\PracticasSE\implementation\Practica2.bit
+FAMILY=Spartan3
+PART=xc3s1000-5ft256
+WORKINGDIR=C:\Users\CJRipa\Videos\Proyecto\PracticasSE\implementation
+LICENSE=WebPack
+USER_INFO=__0_0_0

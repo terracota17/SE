@@ -1,0 +1,30 @@
+//! **************************************************************************
+// Written by: Map P.15xf on Tue Jan 31 21:27:08 2023
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "banner_0_col_serial_out_pin" LOCATE = SITE "P12" LEVEL 1;
+COMP "Clk_pin" LOCATE = SITE "P8" LEVEL 1;
+COMP "banner_0_reset2_out_pin" LOCATE = SITE "K15" LEVEL 1;
+COMP "Rst_pin" LOCATE = SITE "K4" LEVEL 1;
+COMP "banner_0_reset_out_pin" LOCATE = SITE "H1" LEVEL 1;
+COMP "keypad_0_R_pin<0>" LOCATE = SITE "P1" LEVEL 1;
+COMP "keypad_0_R_pin<1>" LOCATE = SITE "M4" LEVEL 1;
+COMP "keypad_0_R_pin<2>" LOCATE = SITE "H14" LEVEL 1;
+COMP "keypad_0_R_pin<3>" LOCATE = SITE "J14" LEVEL 1;
+COMP "keypad_0_S_pin<0>" LOCATE = SITE "G1" LEVEL 1;
+COMP "keypad_0_S_pin<1>" LOCATE = SITE "G3" LEVEL 1;
+COMP "keypad_0_S_pin<2>" LOCATE = SITE "G4" LEVEL 1;
+COMP "keypad_0_S_pin<3>" LOCATE = SITE "F2" LEVEL 1;
+COMP "banner_0_row_serial_out_pin" LOCATE = SITE "H3" LEVEL 1;
+COMP "RX_pin" LOCATE = SITE "G5" LEVEL 1;
+COMP "TX_pin" LOCATE = SITE "J2" LEVEL 1;
+COMP "altavoz_0_sonido_pin" LOCATE = SITE "M15" LEVEL 1;
+COMP "banner_0_row_clk_pin" LOCATE = SITE "G2" LEVEL 1;
+COMP "leds_rgb_0_green_pin" LOCATE = SITE "D16" LEVEL 1;
+COMP "leds_rgb_0_blue_pin" LOCATE = SITE "J16" LEVEL 1;
+COMP "banner_0_col_clk_pin" LOCATE = SITE "J1" LEVEL 1;
+COMP "leds_rgb_0_red_pin" LOCATE = SITE "E15" LEVEL 1;
+NET "Clk_pin_BUFGP/IBUFG" BEL "Clk_pin_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+
